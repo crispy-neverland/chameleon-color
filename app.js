@@ -32,10 +32,10 @@ canvas.width = canvas.height = 800;
 bloomCanvas.width = bloomCanvas.height = 800;
 
 const img = new Image();
-img.src = "/img/chameleon.png";
+img.src = "./img/chameleon.png";
 
 const mask = new Image();
-mask.src = "/img/mask.png";
+mask.src = "./img/mask.png";
 
 const maskCanvas = document.createElement("canvas");
 const maskCtx = maskCanvas.getContext("2d");
@@ -88,7 +88,7 @@ function gaussianRandom() {
 // CIRCLE LOGIC
 // -------------------------------
 function randomRadius() {
-  return Math.random() * (30 - 19) + 19; // 1�3 cm
+  return Math.random() * (30 - 19) + 19; // 1–3 cm
 };
 
 function isAllowed(x, y) {
@@ -137,8 +137,8 @@ async function saveCircleToFirebase(data) {
 let isBlooming = false;
 
 function createCircle(colorHex) {
-  if (isBlooming) return;   // 👈 ignore extra clicks
-  isBlooming = true;        // 🔒 lock
+  if (isBlooming) return;   // ðŸ‘ˆ ignore extra clicks
+  isBlooming = true;        // ðŸ”’ lock
 
   submitBtn.disabled = true;
 // Inline styles used intentionally to avoid CSS specificity conflicts
@@ -193,7 +193,7 @@ function createCircle(colorHex) {
     if (t < 1) {
 	  requestAnimationFrame(animate);
 	} else {
-  	isBlooming = false; // 🔓 unlock AFTER bloom finishes
+  	isBlooming = false; // ðŸ”“ unlock AFTER bloom finishes
 	
 	submitBtn.disabled = false;
 	// Inline styles used intentionally to avoid CSS specificity conflicts
