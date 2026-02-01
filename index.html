@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>What color am I?</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>	
+	<div class="title">
+		<h1>What color am I?</h1>
+		<h1 class="jp">ぼくは、何色だと思いますか？</h1>
+	</div>	
+	
+	<div class="description">
+		<p>
+		あなたが感じた色を選んでみてください。<br>
+		その色は、そっとキャンバスに残っていきます。<br>
+		何度でも色を重ねられます。<br>
+		自由に、色づけしてもらえたら嬉しいです。
+		</p>
+	</div>
+
+	<div id="ui">
+		<label for="colorPicker" class="picker-label">カラーピッカー：</label>
+		<input type="color" id="colorPicker" value="#7FA8A1">
+		<button id="submitColor">Go！</button>
+	</div>
+	
+	<canvas id="canvas"></canvas>
+	
+
+  <!-- Firebase SDKs -->
+  <!-- Firebase (compat version) -->
+ <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+  <!-- Your code -->
+  <script src="./app.js"></script>
+
+</body>
+</html>
